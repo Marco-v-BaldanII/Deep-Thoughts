@@ -3845,7 +3845,7 @@ size = Vector2(1632, 155)
 size = Vector2(1632, 155)
 
 [sub_resource type="Gradient" id="Gradient_3w5va"]
-offsets = PackedFloat32Array(0, 0.368932, 0.762136, 1)
+offsets = PackedFloat32Array(0, 0.266234, 0.837662, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.917476, 0.917476, 0.917476, 1, 0.907942, 0.907942, 0.907942, 1, 0.212305, 0.212305, 0.212305, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_d7mu8"]
@@ -5111,7 +5111,7 @@ script = ExtResource("25_ealjf")
 player_pref = ExtResource("1_ll00w")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.964706, 0.388235, 0.411765, 0.870588)
+color = Color(0.957926, 0.354964, 0.386156, 0.952941)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
 position = Vector2(547, 4019)
