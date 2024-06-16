@@ -140,7 +140,7 @@ func _handle_movement_input(delta : float):
 				anim_sprite.play("default", 1, true)
 			else:
 				anim_sprite.play("default_angel", 1, true)
-			print("deafsault")
+
 			
 		else:
 			if playerId == 1 :
@@ -185,7 +185,7 @@ func super_boost(delta: float):
 					if not change_anim:
 						anim_sprite.play("demon_fall", 1, true)
 						change_anim = true
-					elif not change_anim:
+				elif playerId == 2 and  not change_anim:
 						anim_sprite.play("angel_fall", 1, true)
 						change_anim = true
 				
