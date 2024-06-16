@@ -1,17 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://nw2jgp78npuc"]
 
 [ext_resource type="Script" path="res://Pau/badendin.gd" id="1_ijvui"]
-[ext_resource type="Texture2D" uid="uid://cl0ahx7ksd7i5" path="res://Pau/Bad ending  (20240616061146).png" id="2_u8cn2"]
+[ext_resource type="VideoStream" path="res://Sprites n fx/Videos/Bad-Ending.ogv" id="2_t1tuw"]
 
 [node name="badendin" type="Node2D"]
 script = ExtResource("1_ijvui")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(581, 325)
-scale = Vector2(0.618985, 0.595264)
-texture = ExtResource("2_u8cn2")
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.599244, 0.59857)
+stream = ExtResource("2_t1tuw")
+autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 7.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
