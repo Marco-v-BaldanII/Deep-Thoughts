@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 class_name  Player
+
 @onready var shieldsprite = $escudoplayer
 
 @onready var animation = $AnimatedSprite2D
@@ -261,9 +262,12 @@ func _on_area_2d_area_entered(area):
 		rival_player.grow_big()
 
 func collision_shield():
+
 	_invincible = true
 	iframes_timer.start(7)
 	shieldsprite.show()
+
+
 
 
 
