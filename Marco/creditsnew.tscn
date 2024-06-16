@@ -1,56 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://q3e36sb1u02k"]
+[gd_scene load_steps=10 format=3 uid="uid://q3e36sb1u02k"]
 
 [ext_resource type="Script" path="res://Marco/creditsnew.gd" id="1_gy0p4"]
+[ext_resource type="Texture2D" uid="uid://bojk847syi4p6" path="res://Sprites/Dona una ullada al meu disseny de Canva!.jpg" id="2_p8ums"]
+[ext_resource type="Texture2D" uid="uid://cil5jcmls4he6" path="res://Sprites/FLECHa (20240616111015).png" id="3_vhs6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kojnq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imwwq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eie4n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i8hqh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2pud"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qiux5"]
+diffuse_texture = ExtResource("3_vhs6f")
 
 [node name="Creditsnew" type="Node2D"]
 script = ExtResource("1_gy0p4")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1154.0
-offset_bottom = 650.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 1151.0
-offset_bottom = 646.0
-text = "																														
-																									   CRÉDITOS
-
-
-
-
-
-
-
-
-
-																	PROGRAMACIÓN:     Marco Baldan,    Pau González,     Biel Liñán
-																	ARTE:     Monica Balza,     Adam Moya,      Alejandro Moya
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Assets no propios: UI elements Xelu's free controller prompts"
-tab_size = 5
-metadata/_edit_use_anchors_ = true
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(598, 319)
+scale = Vector2(0.621408, 0.621408)
+texture = ExtResource("2_p8ums")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 860.0
-offset_top = 562.0
-offset_right = 974.0
-offset_bottom = 593.0
-scale = Vector2(2.48, 2.48)
-text = "Back to Menu"
+offset_left = 6.0
+offset_top = 528.0
+offset_right = 120.0
+offset_bottom = 600.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kojnq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_imwwq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eie4n")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_i8hqh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r2pud")
+icon = SubResource("CanvasTexture_qiux5")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
