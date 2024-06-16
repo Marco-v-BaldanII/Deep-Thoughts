@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://iffcmnt5wr56"]
+[gd_scene load_steps=66 format=3 uid="uid://iffcmnt5wr56"]
 
 [ext_resource type="Script" path="res://Marco/player.gd" id="1_p0wu0"]
 [ext_resource type="Texture2D" uid="uid://rjmy6qdsls5o" path="res://Sprites/J2_TRANS_ESTATIC_MOV_SPRITESHEET.png" id="2_8aegu"]
@@ -10,20 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://y0t0vmnkylqa" path="res://Sprites/BARRA_CARGA (20240616123410).png" id="8_5xyqs"]
 [ext_resource type="Texture2D" uid="uid://bh4yr1fdoyve4" path="res://Sprites/SPLASH (20240616122159).png" id="9_pfd0b"]
 [ext_resource type="Texture2D" uid="uid://5bck76k6r6cl" path="res://Sprites/ESCUDO (20240616043913).png" id="10_hqwxh"]
-
-[sub_resource type="Curve" id="Curve_clo3b"]
-_data = [Vector2(0.0266667, 1), 0.0, 0.0, 0, 0, Vector2(0.173333, 0.934066), 0.0, 0.0, 0, 0, Vector2(0.626667, 0.472527), 0.0, 0.0, 0, 0, Vector2(1, 0.0879121), 0.0, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="CurveTexture" id="CurveTexture_48dae"]
-curve = SubResource("Curve_clo3b")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6282l"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-scale_max = 20.0
-scale_curve = SubResource("CurveTexture_48dae")
-color = Color(1, 1, 0.788235, 0.431373)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lekbu"]
 
@@ -412,22 +398,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_vxfjx"]
-colors = PackedColorArray(0.376461, 0.293831, 0.118601, 1, 0.897161, 0.688281, 0.90981, 1)
+[sub_resource type="Curve" id="Curve_yrkyi"]
+_data = [Vector2(0.0266667, 1), 0.0, 0.0, 0, 0, Vector2(0.173333, 0.934066), 0.0, 0.0, 0, 0, Vector2(0.626667, 0.472527), 0.0, 0.0, 0, 0, Vector2(1, 0.0879121), 0.0, 0.0, 0, 0]
+point_count = 4
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_n0nc7"]
-gradient = SubResource("Gradient_vxfjx")
+[sub_resource type="CurveTexture" id="CurveTexture_5uxhs"]
+curve = SubResource("Curve_yrkyi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_spv3w"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+scale_max = 20.0
+scale_curve = SubResource("CurveTexture_5uxhs")
+color = Color(1, 1, 0.788235, 0.431373)
 
 [node name="Player2" type="CharacterBody2D" groups=["player"]]
 position = Vector2(563, 0)
 script = ExtResource("1_p0wu0")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(-1, 39)
-process_material = SubResource("ParticleProcessMaterial_6282l")
-
 [node name="ParticleSystem" parent="." instance=ExtResource("2_nn3q0")]
-visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -451,7 +440,7 @@ shape = SubResource("CircleShape2D_8lr02")
 position = Vector2(0, 17)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tuhkp")
-animation = &"default_angel"
+animation = &"stun_angel"
 
 [node name="ink_timer" type="Timer" parent="."]
 
@@ -485,14 +474,9 @@ visible = false
 scale = Vector2(0.0799996, 0.0799996)
 texture = ExtResource("10_hqwxh")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
-position = Vector2(0, -0.999992)
-scale = Vector2(1, 218)
-color = Color(0.120848, 0.000205747, 0.279297, 1)
-energy = 8.7
-shadow_color = Color(0, 0, 0.482353, 0)
-texture = SubResource("GradientTexture1D_n0nc7")
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-1, 39)
+process_material = SubResource("ParticleProcessMaterial_spv3w")
 
 [connection signal="timeout" from="iframes_timer" to="." method="_on_iframes_timer_timeout"]
 [connection signal="timeout" from="small_iframes" to="." method="_on_small_iframes_timeout"]
