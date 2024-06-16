@@ -332,7 +332,7 @@ func grow_big():
 
 func _on_big_timer_timeout():
 	big_timer.stop()
-	scale = Vector2(2,2)
+	scale = Vector2(1,1)
 	pass # Replace with function body.
 	
 	
