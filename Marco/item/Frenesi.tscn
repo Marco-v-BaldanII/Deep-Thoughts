@@ -107,6 +107,7 @@ scale = Vector2(3.48, 3.48)
 shape = SubResource("CircleShape2D_sommm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(1, 1.00006)
 scale = Vector2(0.28, 0.28)
 sprite_frames = SubResource("SpriteFrames_yvc0i")
