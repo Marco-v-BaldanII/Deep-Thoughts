@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://iffcmnt5wr56"]
+[gd_scene load_steps=65 format=3 uid="uid://iffcmnt5wr56"]
 
 [ext_resource type="Script" path="res://Marco/player.gd" id="1_p0wu0"]
 [ext_resource type="Texture2D" uid="uid://rjmy6qdsls5o" path="res://Sprites/J2_TRANS_ESTATIC_MOV_SPRITESHEET.png" id="2_8aegu"]
@@ -398,11 +398,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_vxfjx"]
+colors = PackedColorArray(0.376461, 0.293831, 0.118601, 1, 0.897161, 0.688281, 0.90981, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n0nc7"]
+gradient = SubResource("Gradient_vxfjx")
+
 [node name="Player2" type="CharacterBody2D" groups=["player"]]
 position = Vector2(563, 0)
 script = ExtResource("1_p0wu0")
 
 [node name="ParticleSystem" parent="." instance=ExtResource("2_nn3q0")]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -426,7 +433,7 @@ shape = SubResource("CircleShape2D_8lr02")
 position = Vector2(0, 17)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tuhkp")
-animation = &"stun_angel"
+animation = &"default_angel"
 
 [node name="ink_timer" type="Timer" parent="."]
 
@@ -459,6 +466,14 @@ texture = ExtResource("9_pfd0b")
 visible = false
 scale = Vector2(0.0799996, 0.0799996)
 texture = ExtResource("10_hqwxh")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -0.999992)
+scale = Vector2(1, 218)
+color = Color(0.120848, 0.000205747, 0.279297, 1)
+energy = 8.7
+shadow_color = Color(0, 0, 0.482353, 0)
+texture = SubResource("GradientTexture1D_n0nc7")
 
 [connection signal="timeout" from="iframes_timer" to="." method="_on_iframes_timer_timeout"]
 [connection signal="timeout" from="small_iframes" to="." method="_on_small_iframes_timeout"]
