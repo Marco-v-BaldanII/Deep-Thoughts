@@ -390,7 +390,6 @@ shape = SubResource("CircleShape2D_8lr02")
 position = Vector2(0, 17)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tuhkp")
-animation = &"default_angel"
 
 [connection signal="timeout" from="iframes_timer" to="." method="_on_iframes_timer_timeout"]
 [connection signal="timeout" from="small_iframes" to="." method="_on_small_iframes_timeout"]

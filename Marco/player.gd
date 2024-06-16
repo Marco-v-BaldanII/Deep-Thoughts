@@ -8,6 +8,8 @@ class_name  Player
 @onready var gpu_particles = $GPUParticles2D
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
+var change_anim : bool = false
+
 @onready var particle_system : Node2D = $ParticleSystem
 
 @export var rival_player : Player
@@ -131,9 +133,27 @@ func _handle_movement_input(delta : float):
 	
 	if(canMove):
 		if(input == 0):
+			change_anim = false
 			buffer_velocity.x = move_toward(buffer_velocity.x, 0, 2)
 			buffer_velocity.y = move_toward(buffer_velocity.y, 0, 2)
+			if playerId == 1 :
+				anim_sprite.play("default", 1, true)
+			else:
+				anim_sprite.play("default_angel", 1, true)
+			print("deafsault")
+			
 		else:
+			if playerId == 1 :
+				
+				if not change_anim:
+					anim_sprite.play("demon_fall", 1, true)
+					change_anim = true
+			else:
+				if not change_anim:
+					anim_sprite.play("angel_fall", 1, true)
+					change_anim = true
+				
+				
 			buffer_velocity.x = move_toward(buffer_velocity.x, max_veloxity, 60)
 			buffer_velocity.y = move_toward(buffer_velocity.y, max_veloxity, 60)
 			
@@ -160,6 +180,15 @@ func super_boost(delta: float):
 		if canMove:
 			var input : float = Input.get_action_raw_strength(super_boost_input)
 			if Input.is_action_pressed(super_boost_input):
+				if playerId == 1 :
+				
+					if not change_anim:
+						anim_sprite.play("demon_fall", 1, true)
+						change_anim = true
+					elif not change_anim:
+						anim_sprite.play("angel_fall", 1, true)
+						change_anim = true
+				
 				gpu_particles.show()
 				if super_bar.value > 5:
 					super_bar.value -= SUPER_BAR_DECELERATION *delta
