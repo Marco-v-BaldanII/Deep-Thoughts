@@ -1,4 +1,4 @@
-[gd_scene load_steps=552 format=3 uid="uid://b7b1hibxkj8t8"]
+[gd_scene load_steps=556 format=3 uid="uid://b7b1hibxkj8t8"]
 
 [ext_resource type="PackedScene" uid="uid://iffcmnt5wr56" path="res://Marco/player.tscn" id="1_ll00w"]
 [ext_resource type="Script" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="2_77nm7"]
@@ -36,6 +36,10 @@
 [ext_resource type="Texture2D" uid="uid://cnrhjg28i10qr" path="res://Sprites n fx/LVL5/BORDE_LVL4 (20240615050345) (1).png" id="30_ygyy0"]
 [ext_resource type="Texture2D" uid="uid://bneyafvnsbp2p" path="res://Sprites n fx/LVL5/FONDO LVL_4 (20240615050146) (1).png" id="31_gqhlp"]
 [ext_resource type="PackedScene" uid="uid://bj35rsdvv1e7q" path="res://Biel/shield.tscn" id="33_y0o0j"]
+[ext_resource type="Texture2D" uid="uid://c7oh8m5ygkwnj" path="res://Sprites n fx/LVL1/LVL1.png" id="34_7kcwl"]
+[ext_resource type="Texture2D" uid="uid://wkfy6uatycsh" path="res://Sprites n fx/LVL2/LVL2.png" id="35_fudp1"]
+[ext_resource type="Texture2D" uid="uid://h6rhhyj147sq" path="res://Sprites n fx/LVL3/LVL3.png" id="36_ws40l"]
+[ext_resource type="Texture2D" uid="uid://c8j8k0qsrtyhq" path="res://Sprites n fx/LVL4/LVL4.png" id="37_5vyxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aljss"]
 size = Vector2(3074, 1526)
@@ -3841,10 +3845,12 @@ size = Vector2(1632, 155)
 size = Vector2(1632, 155)
 
 [sub_resource type="Gradient" id="Gradient_3w5va"]
+offsets = PackedFloat32Array(0, 0.368932, 0.762136, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.917476, 0.917476, 0.917476, 1, 0.907942, 0.907942, 0.907942, 1, 0.212305, 0.212305, 0.212305, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_d7mu8"]
 gradient = SubResource("Gradient_3w5va")
-fill_to = Vector2(0.542735, 0)
+fill_to = Vector2(0.974359, 0)
 
 [node name="main2" type="Node2D"]
 
@@ -3868,6 +3874,200 @@ size = Vector2i(575, 650)
 render_target_update_mode = 4
 
 [node name="GameManager" type="Node2D" parent="GridContainer/SubViewportContainer/SubViewport"]
+
+[node name="decors" type="Node" parent="GridContainer/SubViewportContainer/SubViewport"]
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(668, 164)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(380, 328)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(696, 600)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(384, 852)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(732, 1448)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(328, 1768)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D7" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(890, 2171)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D8" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(360, 2730)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D9" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(419, 3071)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D10" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(734, 3394)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D11" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(432, 3941)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D12" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(742, 4069)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D13" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(400, 4619)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D14" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(870, 4787)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D15" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(520, 5337)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D16" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(266, 5753)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D17" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(293, 6172)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D18" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(560, 6596)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D19" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(824, 7055)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D20" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(194, 7218)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D21" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(859, 7533)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D22" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(584, 8016)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D23" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(456, 8331)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D24" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(854, 8494)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D25" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(240, 8892)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D26" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(927, 9183)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D27" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(531, 9613)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D28" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(890, 9927)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D29" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(387, 10346)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D30" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(953, 11157)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D31" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(379, 11502)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D32" type="Sprite2D" parent="GridContainer/SubViewportContainer/SubViewport/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(653, 12186)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
 
 [node name="Obstacles" type="Node" parent="GridContainer/SubViewportContainer/SubViewport"]
 
@@ -4246,6 +4446,200 @@ position = Vector2(600, 1000)
 [node name="CrushingObstacle" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles" instance=ExtResource("6_c4uej")]
 position = Vector2(635, 4611)
 
+[node name="decors" type="Node" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles"]
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(668, 164)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(380, 328)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(696, 600)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(384, 852)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(732, 1448)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(328, 1768)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D7" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(890, 2171)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D8" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(360, 2730)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D9" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(419, 3071)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D10" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(734, 3394)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D11" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(432, 3941)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D12" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(742, 4069)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D13" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(400, 4619)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D14" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(870, 4787)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D15" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(520, 5337)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D16" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(266, 5753)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D17" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(293, 6172)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D18" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(560, 6596)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D19" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(824, 7055)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D20" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(194, 7218)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D21" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(859, 7533)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D22" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(584, 8016)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D23" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(456, 8331)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D24" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(854, 8494)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D25" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(240, 8892)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D26" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(927, 9183)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D27" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(531, 9613)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D28" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(890, 9927)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D29" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(387, 10346)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D30" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(953, 11157)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D31" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(379, 11502)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D32" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Obstacles/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(653, 12186)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
 [node name="Environment" type="Node" parent="GridContainer/SubViewportContainer2/SubViewport"]
 
 [node name="Frenesi" parent="GridContainer/SubViewportContainer2/SubViewport/Environment" instance=ExtResource("5_du7cb")]
@@ -4471,6 +4865,200 @@ position = Vector2(400, 5574.84)
 visible = false
 position = Vector2(688.43, 2374.84)
 
+[node name="decors" type="Node" parent="GridContainer/SubViewportContainer2/SubViewport/Environment"]
+
+[node name="Sprite2D" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(668, 164)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(380, 328)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(696, 600)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(384, 852)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(732, 1448)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(328, 1768)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D7" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(890, 2171)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D8" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(360, 2730)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("34_7kcwl")
+
+[node name="Sprite2D9" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(419, 3071)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D10" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(734, 3394)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D11" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(432, 3941)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D12" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(742, 4069)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D13" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(400, 4619)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D14" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(870, 4787)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D15" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(520, 5337)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D16" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(266, 5753)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("35_fudp1")
+
+[node name="Sprite2D17" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(293, 6172)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D18" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(560, 6596)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D19" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(824, 7055)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D20" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(194, 7218)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D21" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(859, 7533)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D22" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(584, 8016)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("36_ws40l")
+
+[node name="Sprite2D23" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(456, 8331)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D24" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(854, 8494)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D25" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(240, 8892)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D26" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(927, 9183)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D27" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(531, 9613)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D28" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(890, 9927)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D29" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(387, 10346)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D30" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(953, 11157)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D31" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(379, 11502)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
+[node name="Sprite2D32" type="Sprite2D" parent="GridContainer/SubViewportContainer2/SubViewport/Environment/decors"]
+modulate = Color(1, 1, 1, 0.282353)
+position = Vector2(653, 12186)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("37_5vyxb")
+
 [node name="Player" parent="GridContainer/SubViewportContainer2/SubViewport/Environment" node_paths=PackedStringArray("player_ref") instance=ExtResource("24_lg64q")]
 player_ref = NodePath("../../../../SubViewportContainer/SubViewport/Player")
 
@@ -4526,13 +5114,8 @@ player_pref = ExtResource("1_ll00w")
 color = Color(0.964706, 0.388235, 0.411765, 0.870588)
 
 [node name="PointLight2D" type="PointLight2D" parent="CanvasModulate"]
-position = Vector2(298.5, 4051.5)
-scale = Vector2(10.3281, 127.609)
-texture = SubResource("GradientTexture2D_d7mu8")
-
-[node name="PointLight2D2" type="PointLight2D" parent="CanvasModulate"]
-position = Vector2(956, 4068)
-scale = Vector2(-10.328, -127.609)
+position = Vector2(547, 4019)
+scale = Vector2(20.9553, 129.963)
 texture = SubResource("GradientTexture2D_d7mu8")
 
 [connection signal="area_entered" from="GridContainer/SubViewportContainer/SubViewport/Environment/LVL1/areeeeaaaa" to="GridContainer/SubViewportContainer/SubViewport/Player" method="_on_areeeeaaaa_area_entered"]

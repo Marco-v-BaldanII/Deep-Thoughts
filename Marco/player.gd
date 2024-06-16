@@ -4,6 +4,7 @@ class_name  Player
 @onready var shieldsprite = $escudoplayer
 
 @onready var animation = $AnimatedSprite2D
+@onready var gpu_particles = $GPUParticles2D
 
 @onready var particle_system : Node2D = $ParticleSystem
 
@@ -157,6 +158,7 @@ func super_boost(delta: float):
 		if canMove:
 			var input : float = Input.get_action_raw_strength(super_boost_input)
 			if Input.is_action_pressed(super_boost_input):
+				gpu_particles.show()
 				if super_bar.value > 5:
 					super_bar.value -= SUPER_BAR_DECELERATION *delta
 					var dir : Vector2 = Vector2(0,1)
@@ -166,7 +168,10 @@ func super_boost(delta: float):
 				
 					velocity = buffer_velocity * dir
 				else:
+					
 					super_bar.value = 0
+			else:
+				gpu_particles.hide()
 	
 func _handle_collision(delta :float):
 	var collision := move_and_collide(velocity* delta)
