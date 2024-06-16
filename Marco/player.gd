@@ -292,13 +292,13 @@ func _on_frenesi_timer_timeout():
 	pass # Replace with function body.
 
 func grow_big():
-	scale *= 2
+	scale = Vector2(2,2)
 	big_timer.start(5)
 
 
 func _on_big_timer_timeout():
 	big_timer.stop()
-	scale /= 2
+	scale = Vector2(2,2)
 	pass # Replace with function body.
 	
 	
