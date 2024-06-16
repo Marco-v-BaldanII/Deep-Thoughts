@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0w02tv6cycid"]
+[gd_scene load_steps=18 format=3 uid="uid://d0w02tv6cycid"]
 
 [ext_resource type="Script" path="res://Pau/Menu.gd" id="1_y6p4d"]
 [ext_resource type="Texture2D" uid="uid://byofdrpq86hdw" path="res://Sprites n fx/LVL1/FONDO_1 (20240615121733).png" id="2_536tt"]
 [ext_resource type="Shader" path="res://Marco/Menu.gdshader" id="3_1my0b"]
 [ext_resource type="Texture2D" uid="uid://dagkdtyaqwuyd" path="res://Sprites n fx/LVL1/PARTICULAS2_LVL1 (20240615053805).png" id="3_mc6er"]
+[ext_resource type="Texture2D" uid="uid://dyky80wi4xtns" path="res://Sprites n fx/ILUSTRACIÓN _MENÚ  (20240616103803).png" id="3_vfjnr"]
 [ext_resource type="Texture2D" uid="uid://b56tbqwlhnygv" path="res://Sprites n fx/LVL1/PARTICULAS_LVL_1 (20240615051531).png" id="5_b7eig"]
 [ext_resource type="Texture2D" uid="uid://cb260kf2loreh" path="res://Sprites/buttons/BOTON_PLAY (20240616050107).png" id="6_ctr86"]
 [ext_resource type="Texture2D" uid="uid://d5xw43o2dh8d" path="res://Sprites/LOGO_JUEGO (20240616050123).png" id="6_wpomr"]
@@ -53,7 +54,14 @@ position = Vector2(573, 137)
 scale = Vector2(0.347656, 0.327778)
 texture = ExtResource("6_wpomr")
 
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.701961)
+position = Vector2(580, 326)
+scale = Vector2(0.599074, 0.599074)
+texture = ExtResource("3_vfjnr")
+
 [node name="Quittxt" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 491.0
 offset_top = 519.0
 offset_right = 2291.0
