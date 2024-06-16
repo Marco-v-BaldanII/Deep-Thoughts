@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://c84ndln2w671q"]
+
+[ext_resource type="PackedScene" uid="uid://pqlntamfauvb" path="res://Marco/obstacles/flippers.tscn" id="1_nbduu"]
+
+[node name="Clock" type="Node2D"]
+position = Vector2(389, 312)
+
+[node name="Flippers" parent="." instance=ExtResource("1_nbduu")]
+position = Vector2(0, 0)
+
+[node name="Flippers2" parent="." instance=ExtResource("1_nbduu")]
+position = Vector2(-11, -1)
+rotation = -1.56788
+
+[node name="Flippers3" parent="." instance=ExtResource("1_nbduu")]
+position = Vector2(-11, -1)
+rotation = -3.16318
+
+[node name="Flippers4" parent="." instance=ExtResource("1_nbduu")]
+position = Vector2(-11, -1)
+rotation = -4.71991

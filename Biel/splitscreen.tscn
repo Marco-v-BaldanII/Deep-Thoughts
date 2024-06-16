@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba2q06vl07whv"]
+
+[ext_resource type="Script" path="res://Biel/splitscreen.gd" id="1_m34bn"]
+[ext_resource type="PackedScene" uid="uid://sw5pr6q4evog" path="res://Pau/lvl_1.tscn" id="2_ebxr4"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_m34bn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="LVL1" parent="HBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("2_ebxr4")]
+
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer/SubViewport"]
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/SubViewportContainer2/SubViewport"]

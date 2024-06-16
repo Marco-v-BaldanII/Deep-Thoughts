@@ -1,0 +1,192 @@
+[gd_scene load_steps=16 format=3 uid="uid://dl77msilrvqsv"]
+
+[ext_resource type="PackedScene" uid="uid://iffcmnt5wr56" path="res://Marco/player.tscn" id="1_7ysbb"]
+[ext_resource type="Script" path="res://Marco/obstacles/Controls.gd" id="1_vcw6m"]
+[ext_resource type="Texture2D" uid="uid://cvd0dromm040l" path="res://Arrow_Down_Key_Dark.png" id="2_420jv"]
+[ext_resource type="Texture2D" uid="uid://byofdrpq86hdw" path="res://Sprites n fx/LVL1/FONDO_1 (20240615121733).png" id="2_xi2jd"]
+[ext_resource type="Texture2D" uid="uid://dmbj3v7g4x55s" path="res://Arrow_Left_Key_Dark.png" id="3_7jpns"]
+[ext_resource type="Shader" path="res://Marco/obstacles/Controls.gdshader" id="3_av0mn"]
+[ext_resource type="Texture2D" uid="uid://dagkdtyaqwuyd" path="res://Sprites n fx/LVL1/PARTICULAS2_LVL1 (20240615053805).png" id="4_18vo8"]
+[ext_resource type="Texture2D" uid="uid://c5bykk20gt4i1" path="res://Arrow_Right_Key_Dark.png" id="4_jwclv"]
+[ext_resource type="Texture2D" uid="uid://hjueto6pgsyi" path="res://Sprites n fx/S_Key_Dark.png" id="5_822ai"]
+[ext_resource type="Texture2D" uid="uid://b56tbqwlhnygv" path="res://Sprites n fx/LVL1/PARTICULAS_LVL_1 (20240615051531).png" id="5_f6vdy"]
+[ext_resource type="Texture2D" uid="uid://njvq4u3tm1n7" path="res://Sprites n fx/W_Key_Dark.png" id="6_5m0mm"]
+[ext_resource type="Texture2D" uid="uid://bgswt2qe6b43u" path="res://Sprites n fx/A_Key_Dark.png" id="7_ky8pt"]
+[ext_resource type="Texture2D" uid="uid://dbuke0h6e5rwq" path="res://Sprites n fx/D_Key_Dark.png" id="8_hpgh8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rx0xn"]
+shader = ExtResource("3_av0mn")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiiu3"]
+size = Vector2(1165, 67)
+
+[node name="Controls" type="Node2D"]
+script = ExtResource("1_vcw6m")
+
+[node name="Fondo1(20240615121733)" type="Sprite2D" parent="."]
+position = Vector2(680.5, 343)
+scale = Vector2(2.67593, 1)
+texture = ExtResource("2_xi2jd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rx0xn")
+position = Vector2(578.5, 665.278)
+scale = Vector2(2.12037, 2.09433)
+texture = ExtResource("4_18vo8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_rx0xn")
+position = Vector2(578.5, 665.278)
+scale = Vector2(2.12037, 2.09433)
+texture = ExtResource("5_f6vdy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 208)
+
+[node name="Player" parent="." instance=ExtResource("1_7ysbb")]
+position = Vector2(252, 210)
+playerId = 1
+
+[node name="Player2" parent="." instance=ExtResource("1_7ysbb")]
+position = Vector2(833, 213)
+playerId = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(571, -155)
+shape = SubResource("RectangleShape2D_aiiu3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(573, 567)
+shape = SubResource("RectangleShape2D_aiiu3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-47, 191)
+rotation = 1.56464
+shape = SubResource("RectangleShape2D_aiiu3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1191, 193)
+rotation = 1.56464
+shape = SubResource("RectangleShape2D_aiiu3")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(614, 52)
+
+[node name="ArrowDownKeyDark" type="Sprite2D" parent="Node2D"]
+position = Vector2(217, 96)
+texture = ExtResource("2_420jv")
+
+[node name="Label" type="Label" parent="Node2D/ArrowDownKeyDark"]
+offset_left = -30.0
+offset_top = -74.0
+offset_right = 28.0
+offset_bottom = -44.0
+theme_override_font_sizes/font_size = 21
+text = "Boost"
+
+[node name="ArrowDownKeyDark2" type="Sprite2D" parent="Node2D"]
+position = Vector2(217, -119)
+rotation = 3.14124
+texture = ExtResource("2_420jv")
+
+[node name="Label" type="Label" parent="Node2D/ArrowDownKeyDark2"]
+offset_left = 56.0131
+offset_top = -36.9801
+offset_right = 178.013
+offset_bottom = -6.98008
+rotation = 3.13383
+theme_override_font_sizes/font_size = 21
+text = "Super Boost"
+
+[node name="ArrowLeftKeyDark" type="Sprite2D" parent="Node2D"]
+position = Vector2(116, 5)
+texture = ExtResource("3_7jpns")
+
+[node name="Label" type="Label" parent="Node2D/ArrowLeftKeyDark"]
+offset_left = -62.0
+offset_top = -70.0
+offset_right = 29.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 21
+text = "Turn Left"
+
+[node name="ArrowRightKeyDark" type="Sprite2D" parent="Node2D"]
+position = Vector2(324, 4)
+texture = ExtResource("4_jwclv")
+
+[node name="Label" type="Label" parent="Node2D/ArrowRightKeyDark"]
+offset_left = -25.0
+offset_top = -70.0
+offset_right = 66.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 21
+text = "Turn Right
+"
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(40, 52)
+
+[node name="ArrowDownKeyDark" type="Sprite2D" parent="Node2D2"]
+position = Vector2(217, 96)
+texture = ExtResource("5_822ai")
+
+[node name="Label" type="Label" parent="Node2D2/ArrowDownKeyDark"]
+offset_left = -30.0
+offset_top = -74.0
+offset_right = 28.0
+offset_bottom = -44.0
+theme_override_font_sizes/font_size = 21
+text = "Boost"
+
+[node name="ArrowDownKeyDark2" type="Sprite2D" parent="Node2D2"]
+position = Vector2(217, -119)
+rotation = 0.00645065
+texture = ExtResource("6_5m0mm")
+
+[node name="Label" type="Label" parent="Node2D2/ArrowDownKeyDark2"]
+offset_left = -59.7665
+offset_top = 36.3863
+offset_right = 62.2335
+offset_bottom = 66.3863
+rotation = 6.27011
+theme_override_font_sizes/font_size = 21
+text = "Super Boost"
+
+[node name="ArrowLeftKeyDark" type="Sprite2D" parent="Node2D2"]
+position = Vector2(116, 5)
+texture = ExtResource("7_ky8pt")
+
+[node name="Label" type="Label" parent="Node2D2/ArrowLeftKeyDark"]
+offset_left = -62.0
+offset_top = -70.0
+offset_right = 29.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 21
+text = "Turn Left"
+
+[node name="ArrowRightKeyDark" type="Sprite2D" parent="Node2D2"]
+position = Vector2(324, 4)
+texture = ExtResource("8_hpgh8")
+
+[node name="Label" type="Label" parent="Node2D2/ArrowRightKeyDark"]
+offset_left = -25.0
+offset_top = -70.0
+offset_right = 66.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 21
+text = "Turn Right
+"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 845.0
+offset_top = 441.0
+offset_right = 959.0
+offset_bottom = 472.0
+scale = Vector2(2.48, 2.48)
+text = "Back to Menu"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+
+[editable path="Player"]

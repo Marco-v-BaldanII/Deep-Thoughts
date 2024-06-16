@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=3 uid="uid://dwtx81vbrjjls"]
+
+[ext_resource type="Script" path="res://Marco/item/Frenesi.gd" id="1_tyyms"]
+[ext_resource type="Texture2D" uid="uid://bmvoll3g062lb" path="res://Marco/item/Guindilla.png" id="2_i432s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sommm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lt2l"]
+atlas = ExtResource("2_i432s")
+region = Rect2(0, 0, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekjve"]
+atlas = ExtResource("2_i432s")
+region = Rect2(1922, 0, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mriv7"]
+atlas = ExtResource("2_i432s")
+region = Rect2(3844, 0, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k7cs"]
+atlas = ExtResource("2_i432s")
+region = Rect2(0, 1082, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b36ir"]
+atlas = ExtResource("2_i432s")
+region = Rect2(1922, 1082, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_damri"]
+atlas = ExtResource("2_i432s")
+region = Rect2(3844, 1082, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrnx0"]
+atlas = ExtResource("2_i432s")
+region = Rect2(0, 2164, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b1sf"]
+atlas = ExtResource("2_i432s")
+region = Rect2(1922, 2164, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl84j"]
+atlas = ExtResource("2_i432s")
+region = Rect2(3844, 2164, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_880ti"]
+atlas = ExtResource("2_i432s")
+region = Rect2(0, 3246, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57880"]
+atlas = ExtResource("2_i432s")
+region = Rect2(1922, 3246, 1922, 1082)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtc68"]
+atlas = ExtResource("2_i432s")
+region = Rect2(3844, 3246, 1922, 1082)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvc0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lt2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekjve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mriv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k7cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b36ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_damri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrnx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b1sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl84j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_880ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57880")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtc68")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Frenesi" type="Node2D"]
+script = ExtResource("1_tyyms")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Frenesi"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(3.48, 3.48)
+shape = SubResource("CircleShape2D_sommm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 1.00006)
+scale = Vector2(0.28, 0.28)
+sprite_frames = SubResource("SpriteFrames_yvc0i")
+frame_progress = 0.908328
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

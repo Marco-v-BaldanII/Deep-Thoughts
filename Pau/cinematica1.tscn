@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c17gxqjnfsxre"]
+
+[ext_resource type="Script" path="res://Pau/cinematica1.gd" id="1_dpid1"]
+[ext_resource type="VideoStream" path="res://Sprites n fx/Videos/Cinemática-Inicial-1.1 (1).ogv" id="1_dxngi"]
+
+[node name="Cinematica1" type="Node2D"]
+script = ExtResource("1_dpid1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.599244, 0.59857)
+stream = ExtResource("1_dxngi")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

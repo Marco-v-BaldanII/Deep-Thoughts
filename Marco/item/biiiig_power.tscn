@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1bra2souudhr"]
+
+[ext_resource type="Script" path="res://Marco/item/biiiig_power.gd" id="1_wqxph"]
+[ext_resource type="Texture2D" uid="uid://cdd6yw6s6gymb" path="res://Marco/item/NEURONA_BUENA (20240615075237).png" id="2_th28d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4d6cw"]
+
+[node name="BiiiigPower" type="Node2D"]
+script = ExtResource("1_wqxph")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0438409, 0.0438409)
+texture = ExtResource("2_th28d")
+
+[node name="Area2D" type="Area2D" parent="." groups=["biiig"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(3.28, 3.28)
+shape = SubResource("CircleShape2D_4d6cw")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

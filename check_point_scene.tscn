@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://co37b22dwsux3"]
+
+[ext_resource type="Script" path="res://Marco/CheckPointManager.gd" id="1_th46l"]
+[ext_resource type="Script" path="res://game_manager.gd" id="2_otg27"]
+[ext_resource type="PackedScene" uid="uid://b4j2qlhl0lwib" path="res://Marco/obstacles/crushing_obstacle.tscn" id="4_3of0i"]
+
+[node name="checkPointScene" type="Node2D"]
+
+[node name="CheckPointManager" type="Node2D" parent="."]
+script = ExtResource("1_th46l")
+
+[node name="GameManager2" type="Node2D" parent="."]
+script = ExtResource("2_otg27")
+
+[node name="CrushingObstacle" parent="." instance=ExtResource("4_3of0i")]
+position = Vector2(156, 2476)

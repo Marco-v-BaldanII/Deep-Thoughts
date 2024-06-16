@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4j2qlhl0lwib"]
+
+[ext_resource type="Script" path="res://Marco/obstacles/crushing_obstacle.gd" id="1_awuem"]
+[ext_resource type="PackedScene" uid="uid://dwtx81vbrjjls" path="res://Marco/item/Frenesi.tscn" id="2_sfkek"]
+[ext_resource type="Texture2D" uid="uid://c64yldjm1nm30" path="res://Sprites/BLOQUEO_OBSTACULO (20240615110453).png" id="3_fisny"]
+
+[sub_resource type="Curve2D" id="Curve2D_4ctiq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 167, 0, 0, 0, 0, 376, 170, 0, 0, 0, 0, 175, 164, 0, 0, 0, 0, -19, 167, 0, 0, 0, 0, -1, 167)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fi8bs"]
+size = Vector2(58.005, 126.697)
+
+[sub_resource type="Curve2D" id="Curve2D_kx8cq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 132, 169, 0, 0, 0, 0, -245, 165, 0, 0, 0, 0, -42, 169, 0, 0, 0, 0, 155, 170, 0, 0, 0, 0, 132, 169)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeqoh"]
+size = Vector2(26, 373)
+
+[node name="CrushingObstacle" type="Node2D"]
+script = ExtResource("1_awuem")
+acceleration = 0.1
+
+[node name="Frenesi" parent="." instance=ExtResource("2_sfkek")]
+position = Vector2(388, 38)
+
+[node name="left_wall" type="Node2D" parent="." groups=["death"]]
+
+[node name="Path2D" type="Path2D" parent="left_wall"]
+curve = SubResource("Curve2D_4ctiq")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="left_wall/Path2D"]
+position = Vector2(-1, 167)
+rotation = 0.00795739
+
+[node name="Area2D" type="Area2D" parent="left_wall/Path2D/PathFollow2D" groups=["death"]]
+rotation = 3.14159
+scale = Vector2(0.6095, -3.30751)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall/Path2D/PathFollow2D/Area2D"]
+position = Vector2(-19.0025, 0.65958)
+shape = SubResource("RectangleShape2D_fi8bs")
+
+[node name="Sprite2D" type="Sprite2D" parent="left_wall/Path2D/PathFollow2D"]
+position = Vector2(-2.93625, 8.02361)
+rotation = 1.5708
+scale = Vector2(0.27, 0.095)
+texture = ExtResource("3_fisny")
+
+[node name="right_wall" type="Node2D" parent="." groups=["death"]]
+position = Vector2(635, 4)
+
+[node name="Path2D" type="Path2D" parent="right_wall"]
+curve = SubResource("Curve2D_kx8cq")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="right_wall/Path2D"]
+position = Vector2(132, 169)
+rotation = -3.13098
+
+[node name="Area2D2" type="Area2D" parent="right_wall/Path2D/PathFollow2D" groups=["death"]]
+position = Vector2(14.0628, 5.85114)
+rotation = -0.00265238
+scale = Vector2(0.609498, -3.3075)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall/Path2D/PathFollow2D/Area2D2"]
+position = Vector2(-19.0025, 0.65958)
+shape = SubResource("RectangleShape2D_fi8bs")
+
+[node name="Sprite2D" type="Sprite2D" parent="right_wall/Path2D/PathFollow2D"]
+position = Vector2(1.348, 1.778)
+rotation = -1.57345
+scale = Vector2(0.273, -0.078)
+texture = ExtResource("3_fisny")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Middle" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(384, 175)
+shape = SubResource("RectangleShape2D_oeqoh")
+
+[connection signal="area_entered" from="left_wall/Path2D/PathFollow2D/Area2D" to="." method="_on_area_2d_area_entered"]

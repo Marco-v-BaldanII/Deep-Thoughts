@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6wvnq3rv8jmh"]
+
+[ext_resource type="Script" path="res://Marco/check_point.gd" id="1_o2wd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j336v"]
+size = Vector2(1157, 20)
+
+[node name="CheckPoint" type="Area2D"]
+position = Vector2(0, 1832)
+script = ExtResource("1_o2wd6")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(786, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(568.5, 0)
+shape = SubResource("RectangleShape2D_j336v")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

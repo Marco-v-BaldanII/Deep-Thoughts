@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj35rsdvv1e7q"]
+
+[ext_resource type="Script" path="res://AttemptItem.gd" id="1_e10iq"]
+[ext_resource type="Texture2D" uid="uid://5bck76k6r6cl" path="res://Sprites/ESCUDO (20240616043913).png" id="2_ybaso"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgskf"]
+radius = 20.0
+
+[node name="AttemptItem" type="Area2D" groups=["item"]]
+position = Vector2(330, 56)
+scale = Vector2(2.11178, 2.14285)
+script = ExtResource("1_e10iq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-46, 14)
+scale = Vector2(0.0211106, 0.0217459)
+texture = ExtResource("2_ybaso")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-46, 14)
+shape = SubResource("CircleShape2D_jgskf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
