@@ -5,6 +5,7 @@ class_name  Player
 
 @onready var animation = $AnimatedSprite2D
 @onready var gpu_particles = $GPUParticles2D
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 @onready var particle_system : Node2D = $ParticleSystem
 
@@ -102,8 +103,8 @@ func _process(delta):
 	if not super_bar == null:
 		super_bar.value += SUPER_BAR_INCREASE *delta
 	#print(super_bar.value)
-	if Input.is_action_just_pressed("shield"):
-		collision_shield()
+	#if Input.is_action_just_pressed("shield"):
+		#collision_shield()
 	InkSprite.global_rotation  = 0
 
 
